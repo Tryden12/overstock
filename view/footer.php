@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-6 col-md-8 col-lg-7">
           <div class="row">
-            <a class="navbar-brand" href="#"><img class="w-25" src="images/overstock_logo_tp_white.png"></a>
+            <a class="navbar-brand" href="#"><img class="w-25" src="../images/overstock_logo_tp_white.png"></a>
           </div>
         </div>
         <div class="col-md-4 col-lg-5 col-6">
