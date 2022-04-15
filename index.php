@@ -118,7 +118,7 @@
 
 
     <!-- Deals of the day section -->
-    <h2 class="text-center pt-4 m-4">Deals of the Day</h2>
+    <h2 class="text-center pt-4 m-4">Deals of the Week</h2>
     <div class="container pb-5">
       <div class="row text-center">
 

@@ -59,11 +59,11 @@
             
                     <!-- Row for Model#, Color -->
                     <dl class="row pt-5">
-                        <dt class="col-sm-3">Model#</dt>
-                        <dd class="col-sm-9">12345611</dd>
+                        <dt class="col-sm-6">ModelID</dt>
+                        <dd class="col-sm-6">12345611</dd>
 
-                        <dt class="col-sm-3">Color</dt>
-                        <dd class="col-sm-9">Black and white </dd>
+                        <dt class="col-sm-6">Qauntity in Stock:</dt>
+                        <dd class="col-sm-6">Black and white </dd>
 
                     </dl>
    
@@ -72,7 +72,7 @@
                     <hr>
                     <!-- Row for Quantity and add to cart button -->
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-6">
                                 <dl class="dlist-inline">
                                 <dt>Quantity: </dt>
                                     <dd> 
@@ -86,7 +86,7 @@
                                     </dd>
                                 </dl>  
                             </div> 
-                            <div class="col-sm-7">
+                            <div class="col-sm-6">
                                 <dl class="dlist-inline">
                                     <dt>Size: </dt>
                                     <dd>
