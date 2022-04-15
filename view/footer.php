@@ -29,9 +29,9 @@
       </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap_dist/js/jquery-3.4.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/popper.min.js"></script>
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/bootstrap-4.4.1.js"></script>
+    <script src="bootstrap_dist/js/popper.min.js"></script>
+    <script src="bootstrap_dist/js/bootstrap-4.4.1.js"></script>
   </body>
 </html>
