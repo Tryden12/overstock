@@ -57,7 +57,7 @@
                     </div> <!-- end of price div -->
 
             
-                    <!-- Row for Model#, Color, Delivery -->
+                    <!-- Row for Model#, Color -->
                     <dl class="row pt-5">
                         <dt class="col-sm-3">Model#</dt>
                         <dd class="col-sm-9">12345611</dd>
@@ -65,8 +65,6 @@
                         <dt class="col-sm-3">Color</dt>
                         <dd class="col-sm-9">Black and white </dd>
 
-                        <dt class="col-sm-3">Delivery</dt>
-                        <dd class="col-sm-9">Russia, USA, and Europe </dd>
                     </dl>
    
 
@@ -110,45 +108,39 @@
                         </div> 
                         <!-- End of Row -->
 
-
-
                         <hr>
+                        
+                        <!-- ===================== ADD TO CART BUTTON =================================== -->
                         <a href="#" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Add to Cart </a>
-                        <!-- short-info-wrap .// -->
-                    </article> <!-- card-body.// -->
-                </aside> <!-- col.// -->
-        </div> <!-- row.// -->
-    </main> <!-- card.// -->
-
-<!-- PRODUCT DETAIL -->
-<article class="card mt-3">
-	<div class="card-body">
-		<h4>Detail overview</h4>
-	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi deserunt mollit anim id est laborum.</p>
-
-
-	</div> <!-- card-body.// -->
-</article> <!-- card.// -->
-
-<!-- PRODUCT DETAIL .// -->
-
-</div> <!-- col // -->
-<aside class="col-xl-2 col-md-3 col-sm-12">
 
 
 
-</aside> <!-- col // -->
-</div> <!-- row.// -->
+                    </article> <!-- END of card body -->
+                </aside> <!-- END of col -->
+        </div> <!-- END of row-->
+    </main> <!-- END of card -->
 
 
+    <!-- PRODUCT DETAIL -->
+    <article class="card mt-3">
+        <div class="card-body">
+            <h4>Detail Overview</h4>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi deserunt mollit anim id est laborum.</p>
 
+        </div> 
+    </article> 
 
+    <!-- PRODUCT DETAIL .// -->
+
+    </div> <!-- END of col -->
+
+</div> <!-- END of row -->
 
 
 
