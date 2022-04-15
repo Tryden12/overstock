@@ -14,7 +14,7 @@
 
 
 <!-- ===================== Product Image (left side) =================================== -->
-    <div class="col-xl-10 col-md-9 col-sm-12">
+    <div class="col-xl-10 col-md-9 col-sm-12 m-auto">
     <main class="card">
         <div class="row no-gutters">
             <aside class="col-sm-6 border-right">
@@ -59,11 +59,11 @@
             
                     <!-- Row for Model#, Color -->
                     <dl class="row pt-5">
-                        <dt class="col-sm-6">ModelID</dt>
+                        <dt class="col-sm-6">Model ID</dt>
                         <dd class="col-sm-6">12345611</dd>
 
-                        <dt class="col-sm-6">Qauntity in Stock:</dt>
-                        <dd class="col-sm-6">Black and white </dd>
+                        <dt class="col-sm-6">In stock?</dt>
+                        <dd class="col-sm-6">(Out of stock)</dd>
 
                     </dl>
    
