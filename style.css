@@ -83,6 +83,11 @@ nav .container {
 	font-weight: bold !important;
 }
 
+.btn-outline-danger {
+	color: #FFFFFF !important;
+	background-color: #dc3545 !important;
+}
+
 a {
 	color: #FFFFFF !important;
 }
