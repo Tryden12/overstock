@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Overstock</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-    <!-- Bootstrap -->
-    <link href="bootstrap_dist/css/bootstrap.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
+<!-- Header -->
+<?php include 'view/header.php'; ?>
+
+<!-- Content goes below -->
+
+
+
+
+    <!-- Navbar section -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">Overstock</a>
@@ -43,7 +38,13 @@
         </div>
       </div>
     </nav>
-    <h2 class="text-center pt-4 bg-light">Deal of the Day</h2>
+
+
+
+
+
+    <!-- Banner for Deal of the Day section-->
+    <h2 class="text-center pt-4 bg-light">Best Deal of the Day</h2>
     <div class="container bg-light">
       <div class="row">
         <div class="col-12">
@@ -54,9 +55,9 @@
                 <img class="d-block w-50 m-auto b-shadow" src="images/shirts.jpg" alt="Featured Product">
                 <!-- Heading 
                 <div class="carousel-caption d-none d-md-block">
-                  <!-- h5 for heading (if needed) 
+                   h5 for heading (if needed) 
                 </div>
-				-->
+				        -->
               </div>
             </div>
           </div>
@@ -64,6 +65,12 @@
       </div>
       <hr>
     </div>
+
+
+
+    <!-- Free shipping/returns & low prices section -->
+
+    <!-- Free shipping -->
     <div class="container pt-4">
       <div class="row">
         <div class="col-4">
@@ -74,17 +81,19 @@
             </div>
           </div>
         </div>
+        <!-- Free Returns -->
         <div class="col-4">
           <div class="row">
-            <div class="col-2"><img class="rounded-circle w-100" alt="Free Shipping" src="images/product-return.png"></div>
+            <div class="col-2"><img class="rounded-circle w-100" alt="Free Returns" src="images/product-return.png"></div>
             <div class="col-lg-6 col-10 m-1">
               <h4>Free Returns</h4>
             </div>
           </div>
         </div>
+        <!-- Low Prices -->
         <div class="col-4">
           <div class="row">
-            <div class="col-2"><img class="rounded-circle w-100" alt="Free Shipping" src="images/save-money.png"></div>
+            <div class="col-2"><img class="rounded-circle w-100" alt="Low Prices" src="images/save-money.png"></div>
             <div class="col-lg-6 col-10 m-1">
               <h4>Low Prices</h4>
             </div>
@@ -93,6 +102,13 @@
       </div>
     </div>
     <hr>
+
+
+
+
+
+
+    <!-- Deals of the day section -->
     <h2 class="text-center pt-4 m-4">Deals of the Day</h2>
     <div class="container pb-5">
       <div class="row text-center">
@@ -162,40 +178,7 @@
     </div>
     
         
-    
-    <div class="container text-white bg-dark p-4">
-      <div class="row">
-        <div class="col-6 col-md-8 col-lg-7">
-          <div class="row">
-            <a class="navbar-brand" href="#"><img class="w-25" src="images/overstock_logo_tp_white.png"></a>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-5 col-6">
-          <address>
-            <strong>OverStock, Inc.</strong><br>
-            Clarksville, TN, 99110-0219<br>
-            <abbr title="Phone"></abbr> (123) 456-7890
-          </address>
-          <address>
-            <strong>Contact Us:</strong><br>
-            <a href="mailto:#">support@overstock.com</a>
-          </address>
-        </div>
-      </div>
-    </div>
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © OverStock 2022. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/jquery-3.4.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/popper.min.js"></script>
-    <script src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/js/bootstrap-4.4.1.js"></script>
-  </body>
-</html>
+
+ 
+<!-- Footer -->
+<?php include 'view/footer.php'; ?>
