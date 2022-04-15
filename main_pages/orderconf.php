@@ -1,10 +1,24 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-</head>
+<!-- Header -->
+<?php include '../view/header.php'; ?>
+<!-- End of Header & Nav Section -->
 
-<body>
-</body>
-</html>
+
+<!-- Content goes below -->
+
+
+
+<div class="placeholder-div">Placeholder (DELETE THIS DIV)</div>
+
+
+
+
+
+
+
+
+
+
+<!-- End of content -->
+
+<!-- Footer -->
+<?php include '../view/footer.php'; ?>
