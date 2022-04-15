@@ -48,6 +48,8 @@
     </nav>
 <!-- End of Header & Nav Section -->
 
+
+
 <!-- Content goes below -->
 
     <!-- Banner for Deal of the Day section-->
@@ -127,7 +129,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary  m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary  m-4">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -137,7 +139,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -147,7 +149,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -159,7 +161,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -169,7 +171,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -179,7 +181,7 @@
             <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
