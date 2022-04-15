@@ -44,7 +44,7 @@
 
 
     <!-- Banner for Deal of the Day section-->
-    <h2 class="text-center pt-4 bg-light">Best Deal of the Day</h2>
+    <h2 class="text-center pt-4 bg-light">Deal of the Day</h2>
     <div class="container bg-light">
       <div class="row">
         <div class="col-12">
