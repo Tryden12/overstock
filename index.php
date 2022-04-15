@@ -126,30 +126,30 @@
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
             <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary  m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary  m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
             <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <img class="card-img-top " src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
@@ -158,30 +158,30 @@
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
             <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
             <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
             <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
-            <div class="card-body pb-2">
+            <div class="card-body pb-2 bg-light">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">Add to Cart</a>
+              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
