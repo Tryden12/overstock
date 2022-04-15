@@ -112,65 +112,67 @@
     <h2 class="text-center pt-4 m-4">Deals of the Day</h2>
     <div class="container pb-5">
       <div class="row text-center">
-        <div class="col-md-4 pb-1 pb-md-0">
+
+      <!-- cards -->
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary  m-4">Add to Cart</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 pb-1 pb-md-0">
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 pb-1 pb-md-0">
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
       </div>
       <div class="row text-center mt-4">
-        <div class="col-md-4 pb-1 pb-md-0">
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 pb-1 pb-md-0">
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 pb-1 pb-md-0">
+        <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="../../../3350-User-Design/Assignments/ryden_tyler_assignment4/images/400X200.gif" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <div class="card-body pb-2">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="#" class="btn btn-primary m-4">Add to Cart</a>
             </div>
           </div>
         </div>
