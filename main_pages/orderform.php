@@ -175,7 +175,7 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
                                 <h5 class="my-0">Total (USD)</h5>
-                                <strong>$20</strong>
+                                <strong>$84.12</strong>
                             </li>
                         </ul>
                         <figure class="itemside mb-3">
@@ -201,15 +201,19 @@
             <div class="container">
                 <div class="py-5 text-center">
                     <i class="fa fa-credit-card fa-3x text-primary"></i>
-                    <h2 class="my-3">Checkout form</h2>
+                    <h2 class="text-start">Checkout Form</h2>
                 </div>
 
 
-                    <!-- Checkout form begins -->
-                    <div class="col-md-8 order-md-1">
+                    
+                    <div class="col-md-8 order-md-1 my-auto mb-5">
                         <h4 class="mb-3">Billing address</h4>
-                        <form class="needs-validation" novalidate>
+
+
+                        <!-- ========== FORM BEGINS  ==========-->
+                        <form class="needs-validation" method="POST" action="orderconf.php" novalidate>
                             <div class="row">
+                                
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">First name</label>
                                     <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
@@ -253,10 +257,10 @@
                             <div class="row">
                                 <div class="col-md-5 mb-3">
                                     <label for="country">Country</label>
-                                    <select class="custom-select d-block w-100" id="country" required>
-                                        <option value="">Choose...</option>
-                                        <option>United States</option>
-                                    </select>
+                                    <input type="text" class="form-control" id="country" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
                                     <div class="invalid-feedback">
                                         Please select a valid country.
                                     </div>
@@ -277,14 +281,11 @@
                                 </div>
                             </div>
                             <hr class="mb-4">
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox p-2">
                                 <input type="checkbox" class="custom-control-input" id="same-address">
                                 <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="save-info">
-                                <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                            </div>
+
                             <hr class="mb-4">
 
                             <h4 class="mb-3">Payment</h4>
