@@ -157,7 +157,13 @@
                                 <div>
                                     <h6 class="my-0">Subtotal:</h6>
                                 </div>
+
+
+                                <!--========  PHP CODE HERE  ========-->
                                 <span class="text-muted">$75.00</span>
+
+
+
                             </li>
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
@@ -171,11 +177,23 @@
                                     <h6 class="my-0">Tax</h6>
                                     <small class="text-muted">7%</small>
                                 </div>
+
+
+                                <!--========  PHP CODE HERE  ========-->
                                 <span class="text-muted">$9.12</span>
+
+
+
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
                                 <h5 class="my-0">Total (USD)</h5>
+
+
+                                <!--========  PHP CODE HERE  ========-->
                                 <strong>$84.12</strong>
+
+
+                                
                             </li>
                         </ul>
                         <figure class="itemside mb-3">
@@ -213,7 +231,7 @@
                         <!-- ========== FORM BEGINS  ==========-->
                         <form class="needs-validation" method="POST" action="orderconf.php" novalidate>
                             <div class="row">
-                                
+
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">First name</label>
                                     <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
