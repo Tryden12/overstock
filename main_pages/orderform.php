@@ -193,7 +193,7 @@
                                 <strong>$84.12</strong>
 
 
-                                
+
                             </li>
                         </ul>
                         <figure class="itemside mb-3">
@@ -218,7 +218,6 @@
         <section id="checkout-container">
             <div class="container">
                 <div class="py-5 text-center">
-                    <i class="fa fa-credit-card fa-3x text-primary"></i>
                     <h2 class="text-start">Checkout Form</h2>
                 </div>
 

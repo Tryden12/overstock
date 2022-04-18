@@ -7,6 +7,8 @@
     <title>Overstock</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="bootstrap_dist/font-awesome/css/font-awesome.min.css" />
     <!-- Bootstrap -->
     <link href="../bootstrap_dist/css/bootstrap.css" rel="stylesheet">
     <link href="../style.css" rel="stylesheet" type="text/css">
