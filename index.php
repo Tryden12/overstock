@@ -8,10 +8,11 @@
     <title>Overstock</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="../image/x-icon" href="images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="bootstrap_dist/css/bootstrap.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="../images/overstock_icon_blue_small.jpg">
   </head>
   <body>
     <!-- Navbar section -->
@@ -37,6 +38,9 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="main_pages/orderform.php">Cart</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="main_pages/orderform.php">Cart</a>
