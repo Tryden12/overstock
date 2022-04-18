@@ -40,9 +40,6 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="main_pages/orderform.php">Cart</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="main_pages/orderform.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
           </ul>
