@@ -26,73 +26,73 @@
 				crossorigin="anonymous"></script>
 	</head>
 	<body style="text-align: center;">
-		<div class="container mt-3">
+		<div class="container mt-5">
 			<h1 style="color: Black;">
 				Admin Panel
 			</h1>
 
-      <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Modify Invoices</h5>
-        <p class="card-text">This page allows you to edit and modify invoices.</p>
-        <a href="#" class="btn btn-primary">Modify Invoices Here</a>
+      <div class="row mt-5 p-2">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Modify Invoices</h5>
+            <p class="card-text">This page allows you to edit and modify invoices.</p>
+            <a href="#" class="btn btn-primary">Modify Invoices Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Deal Manager</h5>
+            <p class="card-text">This page allows you to edit and modify the daily and weekly deals.</p>
+            <a href="#" class="btn btn-primary">Manage Deals Here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Deal Manager</h5>
-        <p class="card-text">This page allows you to edit and modify the daily and weekly deals.</p>
-        <a href="#" class="btn btn-primary">Manage Deals Here</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Upload Image</h5>
-        <p class="card-text">This page is used to upload images of the daily deals and any other image that should be added to the webpage.</p>
-        <a href="#" class="btn btn-primary">Upload Image Here</a>
+    <div class="row p-2">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Upload Image</h5>
+            <p class="card-text">This page is used to upload images of the daily deals and any other image that should be added to the webpage.</p>
+            <a href="#" class="btn btn-primary">Upload Image Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Invoice Report</h5>
+            <p class="card-text">This page is used to generate reports of current and previous invoices.</p>
+            <a href="#" class="btn btn-primary">Generate Invoice Report Here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Invoice Report</h5>
-        <p class="card-text">This page is used to generate reports of current and previous invoices.</p>
-        <a href="#" class="btn btn-primary">Generate Invoice Report Here</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Order Report</h5>
-        <p class="card-text">This page is used to generate reports of current and previous oreders.</p>
-        <a href="#" class="btn btn-primary">Generate Order Report Here</a>
+    <div class="row p-2 mb-5">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Order Report</h5>
+            <p class="card-text">This page is used to generate reports of current and previous oreders.</p>
+            <a href="#" class="btn btn-primary">Generate Order Report Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Home</h5>
+            <p class="card-text">This link will redirect you to the home page.</p>
+            <a href="#" class="btn btn-primary">Go Home Here</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Home</h5>
-        <p class="card-text">This link will redirect you to the home page.</p>
-        <a href="#" class="btn btn-primary">Go Home Here</a>
-      </div>
-    </div>
-  </div>
-</div>
 		</div>
 	</body>
 </html>
