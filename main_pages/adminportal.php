@@ -37,7 +37,7 @@
           <div class="card-body">
             <h5 class="card-title">Modify Invoices</h5>
             <p class="card-text">This page allows you to edit and modify invoices.</p>
-            <a href="#" class="btn btn-primary">Modify Invoices Here</a>
+            <a href="#" class="btn btn-primary">Modify Invoices</a>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
           <div class="card-body">
             <h5 class="card-title">Deal Manager</h5>
             <p class="card-text">This page allows you to edit and modify the daily and weekly deals.</p>
-            <a href="#" class="btn btn-primary">Manage Deals Here</a>
+            <a href="#" class="btn btn-primary">Manage Deals</a>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
           <div class="card-body">
             <h5 class="card-title">Upload Image</h5>
             <p class="card-text">This page is used to upload images of the daily deals and any other image that should be added to the webpage.</p>
-            <a href="#" class="btn btn-primary">Upload Image Here</a>
+            <a href="#" class="btn btn-primary">Upload Image</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
           <div class="card-body">
             <h5 class="card-title">Invoice Report</h5>
             <p class="card-text">This page is used to generate reports of current and previous invoices.</p>
-            <a href="#" class="btn btn-primary">Generate Invoice Report Here</a>
+            <a href="#" class="btn btn-primary">Generate Invoice Report</a>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@
           <div class="card-body">
             <h5 class="card-title">Order Report</h5>
             <p class="card-text">This page is used to generate reports of current and previous oreders.</p>
-            <a href="#" class="btn btn-primary">Generate Order Report Here</a>
+            <a href="#" class="btn btn-primary">Generate Order Report</a>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title">Home</h5>
             <p class="card-text">This link will redirect you to the home page.</p>
-            <a href="#" class="btn btn-primary">Go Home Here</a>
+            <a href="#" class="btn btn-primary">Go Home</a>
           </div>
         </div>
       </div>
