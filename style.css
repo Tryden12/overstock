@@ -123,6 +123,10 @@ form{
 	margin-top: 30px;
 }
 
+.login-logo {
+	margin: 0 auto;
+}
+
 .card-title{ font-weight:300; }
 
 .btn{

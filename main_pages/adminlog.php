@@ -21,30 +21,32 @@
 
 
 
-<div class="global-container">
-	<div class="card login-form">
+<div class="global-container mt-5">
+	<div class="card login-form mt-5">
 	<div class="card-body">
-		<h3 class="card-title text-center">Admin Login</h3>
+        <div class="row">
+            <div class="login-logo">
+                <img class="w-50 mx-auto d-block" src="../images/overstock_logo_tp.png">
+            </div>
+        </div>
+		<h3 class="card-title text-center mt-2">Admin Login</h3>
 		<div class="card-text">
-			<!--
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-			<form>
-				<!-- to error: add class "has-danger" -->
+
+            <!-- ===== FORM START =====-->
+			<form method="POST" action="adminportal.php">
 				<div class="form-group">
-					<label for="exampleInputEmail1">Email address</label>
-					<input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<label for="inputEmail1">Email address</label>
+					<input type="email" class="form-control form-control-sm" id="inputEmail1" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Password</label>
+					<label for="inputPassword1">Password</label>
 					<a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-					<input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+					<input type="password" class="form-control form-control-sm" id="inputPassword1">
 				</div>
 				<button type="submit" class="btn btn-primary btn-block">Sign in</button>
-				
-				<div class="sign-up">
-					Don't have an account? <a href="#">Create One</a>
-				</div>
 			</form>
+            <!-- ===== FORM END =====-->
+
 		</div>
 	</div>
 </div>
