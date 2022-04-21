@@ -26,7 +26,7 @@
 	<div class="card-body">
         <div class="row">
             <div class="login-logo">
-                <img class="w-50 mx-auto d-block" src="../images/overstock_logo_tp.png">
+                <img class="w-25 mx-auto d-block" src="../images/overstock_logo_tp.png">
             </div>
         </div>
 		<h3 class="card-title text-center mt-2">Admin Login</h3>
@@ -35,15 +35,14 @@
             <!-- ===== FORM START =====-->
 			<form method="POST" action="adminportal.php">
 				<div class="form-group">
-					<label for="inputEmail1">Email address</label>
+					<label class="login-label" for="inputEmail1">Email address</label>
 					<input type="email" class="form-control form-control-sm" id="inputEmail1" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
-					<label for="inputPassword1">Password</label>
-					<a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-					<input type="password" class="form-control form-control-sm" id="inputPassword1">
+					<label class="login-label" for="inputPassword">Password</label>
+					<input type="password" class="form-control form-control-sm" id="inputPassword">
 				</div>
-				<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+				<button type="submit" class="btn btn-login btn-primary btn-block mx-auto d-block btn-long-width mb-2">Sign in</button>
 			</form>
             <!-- ===== FORM END =====-->
 
