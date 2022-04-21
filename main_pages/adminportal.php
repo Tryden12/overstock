@@ -23,18 +23,18 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Modify Invoices</h5>
+            <h4 class="card-title">Modify Invoices</h4>
             <p class="card-text">This page allows you to edit and modify invoices.</p>
-            <a href="modifyinv.php" class="btn btn-primary">Modify Invoices</a>
+            <a href="modifyinv.php" class="btn btn-primary mb-2">Modify Invoices</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Deal Manager</h5>
+            <h4 class="card-title">Deal Manager</h4>
             <p class="card-text">This page allows you to edit and modify the daily and weekly deals.</p>
-            <a href="dealmanager.php" class="btn btn-primary">Manage Deals</a>
+            <a href="dealmanager.php" class="btn btn-primary mb-2">Manage Deals</a>
           </div>
         </div>
       </div>
@@ -44,18 +44,18 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Upload Image</h5>
+            <h4 class="card-title">Upload Image</h4>
             <p class="card-text">This page is used to upload images of the daily deals and any other image that should be added to the webpage.</p>
-            <a href="uploadimg.php" class="btn btn-primary">Upload Image</a>
+            <a href="uploadimg.php" class="btn btn-primary mb-2">Upload Image</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Invoice Report</h5>
+            <h4 class="card-title">Invoice Report</h4>
             <p class="card-text">This page is used to generate reports of current and previous invoices.</p>
-            <a href="invreport.php" class="btn btn-primary">Generate Invoice Report</a>
+            <a href="invreport.php" class="btn btn-primary mb-4">Generate Invoice Report</a>
           </div>
         </div>
       </div>
@@ -65,18 +65,18 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Order Report</h5>
+            <h4 class="card-title">Order Report</h4>
             <p class="card-text">This page is used to generate reports of current and previous oreders.</p>
-            <a href="orderreport.php" class="btn btn-primary">Generate Order Report</a>
+            <a href="orderreport.php" class="btn btn-primary mb-2">Generate Order Report</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Home</h5>
+            <h4 class="card-title">Home</h4>
             <p class="card-text">This link will redirect you to the home page.</p>
-            <a href="../index.php" class="btn btn-primary">Go Home</a>
+            <a href="../index.php" class="btn btn-primary mb-2">Go Home</a>
           </div>
         </div>
       </div>
