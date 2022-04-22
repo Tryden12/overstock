@@ -14,13 +14,16 @@
     <link href="../style.css" rel="stylesheet" type="text/css">
   </head>
 <body>
-	<div class="container mt-5">
-		<h1 class="text-black text-center m-5">Modify Inventory</h1>
-        <div class="row p-2 mb-5">
-            <div class="col-sm-6 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                    <table class="table table-striped">
+	
+    <div class="global-container mt-5 p-2">
+	<div class="card card-table mt-5">
+    <div class="contianer">
+            <div class="row">
+                <h1 class="text-black text-center m-2">Modify Inventory</h1>
+            </div>
+        </div>
+	<div class="card-body">
+        <table class="table table-striped">
                         <thead>
                             <tr>
                             <th scope="col">ItemID</th>
@@ -67,11 +70,10 @@
                             </tr>
                         </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	</div>
+</div>
+</div>
+
 </body>
 </html>
 

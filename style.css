@@ -166,3 +166,11 @@ form {
 	font-size: 16px;
 	margin-top:20px;
 }
+
+
+/**********************  MODIFY INV  *********************************/
+.card-table { 
+	width: 800px;
+	margin: 30px;
+	padding: 20px;
+}
