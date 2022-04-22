@@ -1,5 +1,51 @@
 <!-- Header -->
 <!DOCTYPE html>
+
+<?php
+
+include 'db\connect.php';
+
+date_default_timezone_set('America/Chicago');
+
+$dates = array();
+$ItemID = array();
+$ItemName = array();
+$Price = array();
+$ImgName = array();
+
+for ($i=0; $i<=6; $i++){
+    $date=new DateTime(date("Y-n-j"), new DateTimeZone('America/Chicago'));
+    $dateinterm = date_add($date,date_interval_create_from_date_string("$i days"));
+    $dates[$i] = date_format($dateinterm,"Y-n-j");
+}
+
+$i = 0;
+
+foreach($dates as $val){
+  $sql = "SELECT * FROM item INNER JOIN images ON item.imgID = images.ImgID WHERE DealDate = \"$val\"";
+  if($result = mysqli_query($link, $sql)){
+      if(mysqli_num_rows($result) > 0){
+          while($row = mysqli_fetch_array($result)){
+            
+            $ItemID[$i] = $row['ItemID'];
+            $ItemName[$i] = $row['ItemName'];
+            $Price[$i] = $row['Price'];
+            $ImgName[$i] = $row['ImgName'];
+            
+          }
+          mysqli_free_result($result);
+      } else{
+          $ItemName = "err";
+      }
+  } else{
+      echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+  }
+
+  $i++;
+}
+?>
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -8,11 +54,10 @@
     <title>Overstock</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="../image/x-icon" href="images/favicon.ico"/>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap -->
     <link href="bootstrap_dist/css/bootstrap.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../images/overstock_icon_blue_small.jpg">
   </head>
   <body>
     <!-- Navbar section -->
@@ -40,9 +85,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="main_pages/orderform.php"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a class="nav-link disabled" href="#">Cart</a>
             </li>
           </ul>
+
         </div>
       </div>
     </nav>
@@ -125,30 +171,30 @@
       <!-- cards -->
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top" src="images/<?php echo $ImgName[1]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[1]?></h5>
+              <p class="card-text">$<?php echo $Price[1]?></p>
               <a href="main_pages/item.php" class="btn btn-primary  m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top" src="images/<?php echo $ImgName[2]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[2]?></h5>
+              <p class="card-text">$<?php echo $Price[2]?></p>
               <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top " src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top " src="images/<?php echo $ImgName[3]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[3]?></h5>
+              <p class="card-text">$<?php echo $Price[3]?></p>
               <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
@@ -157,30 +203,30 @@
       <div class="row text-center mt-4">
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top" src="images/<?php echo $ImgName[4]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[4]?></h5>
+              <p class="card-text">$<?php echo $Price[4]?></p>
               <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top" src="images/<?php echo $ImgName[5]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[5]?></h5>
+              <p class="card-text">$<?php echo $Price[5]?></p>
               <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 pb-1 pb-md-4">
           <div class="card b-shadow">
-            <img class="card-img-top" src="images/mensboot.png" alt="Card image cap">
+            <img class="card-img-top" src="images/<?php echo $ImgName[6]?>" alt="Card image cap">
             <div class="card-body pb-2 bg-light">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title"><?php echo $ItemName[6]?></h5>
+              <p class="card-text">$<?php echo $Price[6]?></p>
               <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
             </div>
           </div>
