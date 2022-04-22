@@ -184,14 +184,9 @@ foreach($dates as $val){
 
 
 
-            
+
       </div>
-    </div>
-  
-
-
-
-   
+    </div>  
 <!-- end of content -->
         
 
