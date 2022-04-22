@@ -174,7 +174,9 @@ foreach($dates as $val){
                     <div class="card-body pb-2 bg-light">
                       <h5 class="card-title"><?php echo $ItemName[$i]?></h5>
                       <p class="card-text">$<?php echo $Price[$i]?></p>
-                      <a href="main_pages/item.php" class="btn btn-primary  m-4">View Item</a>
+                      <form method="POST" action="item.php">
+                        <button type="submit" name="itemName" value="<?php $ItemName ?>" class="btn btn-primary  m-4">View Item</button>
+                      </form>
                     </div>
                   </div>
                 </div>
