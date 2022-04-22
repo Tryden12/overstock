@@ -13,7 +13,7 @@
     <link href="../bootstrap_dist/css/bootstrap.css" rel="stylesheet">
     <link href="../style.css" rel="stylesheet" type="text/css">
   </head>
-  <body style="text-align: center">
+  <body class="text-center">
 		<div class="container mt-5">
 			<h1 style="color: Black;">
 				Admin Panel
@@ -23,7 +23,7 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Modify Invoices</h4>
+            <h4 class="card-title">Modify Inventory</h4>
             <p class="card-text">This page allows you to add or delete current inventory.</p>
             <a href="modifyinv.php" class="btn btn-primary mb-2">Modify Inventory</a>
           </div>
