@@ -3,7 +3,7 @@
 
 <?php
 
-include 'db\connect.php';
+include 'db/connect.php';
 
 date_default_timezone_set('America/Chicago');
 
