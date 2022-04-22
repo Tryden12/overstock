@@ -16,7 +16,7 @@
   <body class="text-center">
 		<div class="container mt-5">
 			<h1 style="color: Black;">
-				Admin Panel
+				Modify Inventory
 			</h1>
 
       <div class="row mt-5 p-2">

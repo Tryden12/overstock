@@ -1,24 +1,82 @@
-<!-- Header -->
-<?php include '../view/header.php'; ?>
-<!-- End of Header & Nav Section -->
-
-
-<!-- Content goes below -->
-
-
-
-<div class="placeholder-div">Placeholder (DELETE THIS DIV)</div>
-
-
-
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="bootstrap_dist/font-awesome/css/font-awesome.min.css" />
+    <!-- Bootstrap -->
+    <link href="../bootstrap_dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+	<div class="container mt-5">
+		<h1 class="text-black text-center m-5">Modify Inventory</h1>
+        <div class="row p-2 mb-5">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">ItemID</th>
+                            <th scope="col">CategoryID</th>
+                            <th scope="col">ModelID</th>
+                            <th scope="col">ItemName</th>
+                            <th scope="col">InStock</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">DealDate</th>
+                            <th scope="col">ImgID</th>
+                            <th scope="col">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>21</td>
+                                <td>21343</td>
+                                <td>Nike Free Run</td>
+                                <td>Yes</td>
+                                <td>30</td>
+                                <td>05/20/22</td>
+                                <td>998899</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>21</td>
+                                <td>21343</td>
+                                <td>Nike Free Run</td>
+                                <td>Yes</td>
+                                <td>30</td>
+                                <td>05/20/22</td>
+                                <td>998899</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>21</td>
+                                <td>21343</td>
+                                <td>Nike Free Run</td>
+                                <td>Yes</td>
+                                <td>30</td>
+                                <td>05/20/22</td>
+                                <td>998899</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
 <!-- End of content -->
 
 <!-- Footer -->
-<?php include '../view/footer.php'; ?>
+</body>
+</html>
