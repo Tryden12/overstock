@@ -24,8 +24,8 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Modify Invoices</h4>
-            <p class="card-text">This page allows you to edit and modify invoices.</p>
-            <a href="modifyinv.php" class="btn btn-primary mb-2">Modify Invoices</a>
+            <p class="card-text">This page allows you to add or delete current inventory.</p>
+            <a href="modifyinv.php" class="btn btn-primary mb-2">Modify Inventory</a>
           </div>
         </div>
       </div>
