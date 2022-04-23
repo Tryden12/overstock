@@ -1,4 +1,37 @@
 <!DOCTYPE html>
+
+<?php
+
+include '../db/connect.php';
+
+if(isset($_POST['submit'])) 
+{ 
+    $user = $_POST['Email'];
+    $pw = $_POST['Pass'];
+    
+    $sql = "SELECT * FROM users WHERE UName = \"$user\" && Pass = \"$pw\"";
+
+    if($result = mysqli_query($link, $sql)){
+      if(mysqli_num_rows($result) > 0){
+          while($row = mysqli_fetch_array($result)){
+          }
+          mysqli_free_result($result);
+      } else{
+        $failflag = TRUE;
+      }
+  } else{
+      echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+  }
+
+  if($failflag){
+    echo "Authentication Info Incorrect. Try Again.";
+  }else{
+    header('Location: ../main_pages/adminportal.php');
+  }
+}
+
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -33,16 +66,16 @@
 		<div class="card-text">
 
             <!-- ===== FORM START =====-->
-			<form method="POST" action="adminportal.php">
+			<form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 				<div class="form-group">
 					<label class="login-label" for="inputEmail1">Email address</label>
-					<input type="email" class="form-control form-control-sm" id="inputEmail1" aria-describedby="emailHelp">
+					<input type="email" name="Email" class="form-control form-control-sm" id="inputEmail1" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
 					<label class="login-label" for="inputPassword">Password</label>
-					<input type="password" class="form-control form-control-sm" id="inputPassword">
+					<input type="password" name="Pass" class="form-control form-control-sm" id="inputPassword">
 				</div>
-				<button type="submit" class="btn btn-login btn-primary btn-block mx-auto d-block btn-long-width mb-2">Sign in</button>
+				<button type="submit" name="submit" class="btn btn-login btn-primary btn-block mx-auto d-block btn-long-width mb-2">Sign in</button>
 			</form>
             <!-- ===== FORM END =====-->
 
