@@ -35,12 +35,13 @@ foreach($dates as $val){
           }
           mysqli_free_result($result);
       } else{
-          $ItemName = "err";
+          $ItemID[$i] = "";
+          $ItemName[$i] = "err";
+          $Price[$i] = "";
       }
   } else{
       echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
   }
-
   $i++;
 }
 ?>
@@ -170,12 +171,12 @@ foreach($dates as $val){
           <?php for($i = 1; $i <= 6; $i++) { ?>
                   <div class="col-md-4 pb-1 pb-md-4">
                   <div class="card b-shadow">
-                    <img class="card-img-top" src="images/<?php echo $ImgName[$i]?>" alt="Card image cap">
+                    <img class="card-img-top" src="images/<?php echo $ImgName[$i]?>" alt="Failed Pull">
                     <div class="card-body pb-2 bg-light">
                       <h5 class="card-title"><?php echo $ItemName[$i]?></h5>
                       <p class="card-text">$<?php echo $Price[$i]?></p>
-                      <form method="POST" action="item.php">
-                        <button type="submit" name="itemName" value="<?php $ItemName ?>" class="btn btn-primary  m-4">View Item</button>
+                      <form method="post" action="main_pages/item.php">
+                        <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-primary  m-4">View Item</button>
                       </form>
                     </div>
                   </div>

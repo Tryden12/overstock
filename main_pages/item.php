@@ -5,7 +5,70 @@
 
 <!-- Content goes below -->
 
+<?php
 
+    include '../db/connect.php';
+
+    $ItemID = $_POST["itemID"];
+
+    $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql1)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+              $ItemName = $row['ItemName'];
+              $Price = $row['Price'];
+              $InStock = $row['InStock'];
+              $ModelID = $row['ModelID'];
+              $Model = $row['Model'];
+              $Manufacturer = $row['Manufacturer'];
+            }
+            mysqli_free_result($result);
+        } else{
+            $ItemName = "error";
+            $Price = "error";
+            $InStock = "error";
+            $ModelID = "error";
+            $Model = "error";
+            $Manufacturer = "error";
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+    $sql2 = "SELECT category.* FROM Item INNER JOIN category ON item.CategoryID = category.CategoryID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql2)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+              $Category = $row['Category'];
+            }
+            mysqli_free_result($result);
+        } else{
+            $Category = "error";
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+    $sql3 = "SELECT images.* FROM item INNER JOIN images ON item.imgID = images.ImgID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql3)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+            $ImgName = $row['ImgName'];
+            }
+            mysqli_free_result($result);
+        } else{
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+?>
 
 
 
@@ -23,7 +86,7 @@
                         
                     
                         <!-- PHP CODE HERE FOR IMAGES -->
-                        <img src="../images/mensboot.png">
+                        <img src="../images/<?php echo $ImgName ?>">
                 
 
                     </div>
@@ -38,7 +101,7 @@
 
 
                     <!--== PHP CODE HERE FOR PRODUCT NAME ==-->
-                    <h3 class="title mb-3">Product Name Goes Here</h3>
+                    <h3 class="title mb-3"><?php echo $ItemName ?></h3>
 
 
 
@@ -49,7 +112,7 @@
 
 
                             <!--== PHP CODE HERE FOR PRODUCT PRICE ==-->
-                            <span class="currency">US $</span><span class="num">40</span>
+                            <span class="currency">US $</span><span class="num"><?php echo $Price ?></span>
 
 
 
@@ -60,10 +123,10 @@
                     <!-- Row for Model#, Color -->
                     <dl class="row pt-5">
                         <dt class="col-sm-6">Model ID</dt>
-                        <dd class="col-sm-6">12345611</dd>
+                        <dd class="col-sm-6"><?php echo $ModelID ?></dd>
 
                         <dt class="col-sm-6">In stock?</dt>
-                        <dd class="col-sm-6">(Out of stock)</dd>
+                        <dd class="col-sm-6"><?php if($InStock >0){echo $Price;}else{echo "Not In Stock";} ?></dd>
 
                     </dl>
    
@@ -125,13 +188,14 @@
     <article class="card mt-3">
         <div class="card-body">
             <h4>Detail Overview</h4>
-        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi deserunt mollit anim id est laborum.</p>
+        <p>	<?php
+
+            echo "Item ID: " . $ItemID . "<br>";
+            echo "Item Name: " . $ItemName . "<br>";
+            echo "Model: " . $Model . "<br>";
+            echo "Manufacturer: " . $Manufacturer . "<br>";
+            echo "Category: " . $Category . "<br>";
+            ?></p>
 
         </div> 
     </article> 
