@@ -3,7 +3,7 @@
 
 <?php
 
-include 'db\connect.php';
+include 'db/connect.php';
 
 date_default_timezone_set('America/Chicago');
 
@@ -159,80 +159,34 @@ foreach($dates as $val){
     <hr>
 
 
-
-
-
-
-    <!-- Deals of the day section -->
-    <h2 class="text-center pt-4 m-4">Deals of the Week</h2>
+  <!-- Deals of the day section -->
+  <h2 class="text-center pt-4 m-4">Deals of the Week</h2>
     <div class="container pb-5">
       <div class="row text-center">
 
-      <!-- cards -->
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top" src="images/<?php echo $ImgName[1]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[1]?></h5>
-              <p class="card-text">$<?php echo $Price[1]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary  m-4">View Item</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top" src="images/<?php echo $ImgName[2]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[2]?></h5>
-              <p class="card-text">$<?php echo $Price[2]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top " src="images/<?php echo $ImgName[3]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[3]?></h5>
-              <p class="card-text">$<?php echo $Price[3]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
-            </div>
-          </div>
-        </div>
+
+
+          <!-- START FOR LOOP -->
+          <?php for($i = 1; $i <= 6; $i++) { ?>
+                  <div class="col-md-4 pb-1 pb-md-4">
+                  <div class="card b-shadow">
+                    <img class="card-img-top" src="images/<?php echo $ImgName[$i]?>" alt="Card image cap">
+                    <div class="card-body pb-2 bg-light">
+                      <h5 class="card-title"><?php echo $ItemName[$i]?></h5>
+                      <p class="card-text">$<?php echo $Price[$i]?></p>
+                      <form method="POST" action="item.php">
+                        <button type="submit" name="itemName" value="<?php $ItemName ?>" class="btn btn-primary  m-4">View Item</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            <?php } ?> <!-- END FOR LOOP -->
+
+
+
+
       </div>
-      <div class="row text-center mt-4">
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top" src="images/<?php echo $ImgName[4]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[4]?></h5>
-              <p class="card-text">$<?php echo $Price[4]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top" src="images/<?php echo $ImgName[5]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[5]?></h5>
-              <p class="card-text">$<?php echo $Price[5]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 pb-1 pb-md-4">
-          <div class="card b-shadow">
-            <img class="card-img-top" src="images/<?php echo $ImgName[6]?>" alt="Card image cap">
-            <div class="card-body pb-2 bg-light">
-              <h5 class="card-title"><?php echo $ItemName[6]?></h5>
-              <p class="card-text">$<?php echo $Price[6]?></p>
-              <a href="main_pages/item.php" class="btn btn-primary m-4">View Item</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>  
 <!-- end of content -->
         
 
