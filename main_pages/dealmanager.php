@@ -56,7 +56,7 @@ $result = $link -> query("SELECT * FROM item");
 
     <!-------------------------- Row for Edit Cart ------------------------->
     <div class="row">
-            <main class="col-sm-9">
+            <div class="col-lg-8 mx-auto">
 
                 <div class="card">
                     <table class="table table-hover shopping-cart-wrap">
@@ -69,7 +69,7 @@ $result = $link -> query("SELECT * FROM item");
                         <tbody>
                             <tr>
                                 <td> 
-                                    <select class="form-control">
+                                    <select class="form-control mt-2">
                                             <option>1</option>
                                             <option>2</option>	
                                             <option>3</option>	
@@ -78,14 +78,18 @@ $result = $link -> query("SELECT * FROM item");
                                 </td>
 
                                 <td class="text-right"> 
-                                    <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30">
+                                    <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30" class="text-end">
                                 </td>
                             </tr>
                             
                         </tbody>
                     </table>
                     <!--======== END OF TABLE ========-->
-    </div> 
+                </div>  
+                
+                <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit">Confirm Deal Date</button>
+            </div> 
+    </div>
 
 </body>
 </html>
