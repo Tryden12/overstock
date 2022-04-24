@@ -3,30 +3,28 @@
 
 include '../db/connect.php';
 
-$msg = "";
-  
-  // If upload button is clicked ...
-  if (isset($_POST['upload'])) {
-  
-    $filename = $_FILES["uploadImage"]["name"];
-    $tempname = $_FILES["uploadImage"]["tmp_name"];    
-    $folder   = "../images/".$filename;
-            
-        // Get all the submitted data from the form
-        $sql1 = "INSERT INTO images (filename) VALUES ('$filename')";
-  
-        // Execute query
-        mysqli_query($link, $sql1);
-          
-        // Now let's move the uploaded image into the folder: image
-        if (move_uploaded_file($tempname, $folder))  {
-            $msg = "Image uploaded successfully";
-        }else{
-            $msg = "Failed to upload the image";
-      }
-  }
-  $result = mysqli_query($link, "SELECT * FROM images");
+if(isset($_POST["upload"])) {
+    $targetDir = "../Images/";
+    $targetFile = $targetDir . basename($_FILES["uploadImage"]["name"]);
+    $FileName = basename($_FILES["uploadImage"]["name"]);
+    $imageFileType = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
 
+    if (move_uploaded_file($_FILES["uploadImage"]["tmp_name"], $targetFile)) {
+        echo "The file ". htmlspecialchars( basename( $_FILES["uploadImage"]["name"])). " has been uploaded.";
+        $sql = "INSERT INTO `images`(`ImgID`, `ImgName`) VALUES ('NULL',\"$FileName\")";
+        
+        if($result = mysqli_query($link, $sql)){
+            echo "Image DB Entry Created";
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+
+      } else {
+        echo "Sorry, there was an error uploading your file.";
+      }
+
+    
+}
 ?>
 
 <!-- Header -->
@@ -54,10 +52,10 @@ $msg = "";
 
 
                 <!--====== FORM START ======-->
-                <form method="POST" action="" enctype="multipart/form-data">
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
 
                     <!-- PHP CODE BELOW -->
-                    <input class="form-control" type="file" id="uploadImage" value="<?php // ID GOES HERE ?>" onchange="previewImage()">
+                    <input class="form-control" type="file" name="uploadImage" name="uploadImage" value="<?php // ID GOES HERE ?>" onchange="previewImage()">
                     <div class="d-grid gap-2 col-3 mx-auto">
                         <button type="submit" name="upload" class="btn btn-primary mt-3" onclick="clearImage()">Upload</button>
                     </div>
