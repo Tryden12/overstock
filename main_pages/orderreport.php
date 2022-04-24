@@ -25,6 +25,14 @@ $result = $link -> query($sql1);
     <link href="../style.css" rel="stylesheet" type="text/css">
   </head>
 <body>
+
+    <div class="container">
+        <div class="row">
+            <form method="post" action="adminportal.php">
+                        <button type="submit" class="btn btn-light m-4"> &#9166; Return to Portal</button>
+            </form>
+        </div> 
+    </div>
 	
     <div class="global-container mt-5 p-2">
 	<div class="card card-table mt-5">

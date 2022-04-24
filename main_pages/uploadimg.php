@@ -28,11 +28,34 @@ if(isset($_POST["upload"])) {
 ?>
 
 <!-- Header -->
-<?php include '../view/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload Image</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="bootstrap_dist/font-awesome/css/font-awesome.min.css" />
+    <!-- Bootstrap -->
+    <link href="../bootstrap_dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
 <!-- End of Header & Nav Section -->
 
 
 <!-- Content goes below -->
+
+<div class="container">
+        <div class="row">
+            <form method="post" action="adminportal.php">
+                        <button type="submit" class="btn btn-light m-4"> &#9166; Return to Portal</button>
+            </form>
+        </div> 
+    </div>
 
 
 <!-- Banner -->
@@ -92,7 +115,11 @@ if(isset($_POST["upload"])) {
 
 
 
+</body>
+</html>
+
 <!-- End of content -->
 
 <!-- Footer -->
-<?php include '../view/footer.php'; ?>
+</body>
+</html>
