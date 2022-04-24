@@ -57,17 +57,17 @@ $result = $link -> query($sql1);
                             
                                     if ($result -> num_rows > 0) {
 
-                                        while ($rows = mysql_fetch_assoc($result)) { // beginning of while loop ?>
+                                        while ($row = mysqli_fetch_array($result)) { // beginning of while loop ?>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td><?php echo $rows.['ItemID'] ?></td>
-                                                <td><?php echo $rows.['CategoryID'] ?></td>
-                                                <td><?php echo $rows.['ModelID'] ?></td>
-                                                <td><?php echo $rows.['ItemName'] ?></td>
-                                                <td><?php echo $rows.['InStock'] ?></td>
-                                                <td><?php echo $rows.['Price'] ?></td>
-                                                <td><?php echo $rows.['DealDate'] ?></td>
-                                                <td><?php echo $rows.['ImgID'] ?></td>
+                                                <td><?php echo $row['ItemID'] ?></td>
+                                                <td><?php echo $row['CategoryID'] ?></td>
+                                                <td><?php echo $row['ModelID'] ?></td>
+                                                <td><?php echo $row['ItemName'] ?></td>
+                                                <td><?php echo $row['InStock'] ?></td>
+                                                <td><?php echo $row['Price'] ?></td>
+                                                <td><?php echo $row['DealDate'] ?></td>
+                                                <td><?php echo $row['ImgID'] ?></td>
                                             </tr>
                             <?php       }  // end of while loop 
                                     } // end if 

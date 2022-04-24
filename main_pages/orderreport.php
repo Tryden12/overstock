@@ -54,15 +54,15 @@ $result = $link -> query($sql1);
                             
                                     if ($result -> num_rows > 0) {
 
-                                        while ($rows = mysql_fetch_assoc($result)) { // beginning of while loop ?>
+                                        while ($row = mysqli_fetch_array($result)) { // beginning of while loop ?>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td><?php echo $rows.['OrderID'] ?></td>
-                                                <td><?php echo $rows.['CustID'] ?></td>
-                                                <td><?php echo $rows.['ItemID'] ?></td>
-                                                <td><?php echo $rows.['Quantity'] ?></td>
-                                                <td><?php echo $rows.['Total'] ?></td>
-                                                <td><?php echo $rows.['STAT'] ?></td>
+                                                <td><?php echo $rows['OrderID'] ?></td>
+                                                <td><?php echo $rows['CustID'] ?></td>
+                                                <td><?php echo $rows['ItemID'] ?></td>
+                                                <td><?php echo $rows['Quantity'] ?></td>
+                                                <td><?php echo $rows['Total'] ?></td>
+                                                <td><?php echo $rows['STAT'] ?></td>
                                             </tr>
                             <?php       }  // end of while loop 
                                     } // end if 

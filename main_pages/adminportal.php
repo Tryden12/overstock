@@ -53,8 +53,8 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Invoice Report</h4>
-            <p class="card-text">This page is used to generate reports of current and previous invoices.</p>
+            <h4 class="card-title">Inventory Report</h4>
+            <p class="card-text">This page is used to generate reports of the current inventory state.</p>
             <a href="invreport.php" class="btn btn-primary mb-4">Generate Invoice Report</a>
           </div>
         </div>
