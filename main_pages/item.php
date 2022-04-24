@@ -151,7 +151,7 @@
                         <hr>
                         
                         <!-- ===================== ADD TO CART BUTTON =================================== -->
-                        <form method="post" action="main_pages/orderform.php">
+                        <form method="post" action="orderform.php">
                             <input type="hidden" name="" value="<?php echo $Quantity ?>">
                             <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-warning mb-3 fw-bold">Add to Cart</button>
                         </form>
