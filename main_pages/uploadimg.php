@@ -18,10 +18,18 @@
 <div class="container col-md-6 mb-5">
         <img id="frame" src="" class="img-fluid p-3" />
             <div class="mb-5">
-                <input class="form-control" type="file" id="formFile" onchange="previewImage()">
-                <div class="d-grid gap-2 col-3 mx-auto">
-                    <button onclick="clearImage()" class="btn btn-primary mt-3">Upload</button>
-                </div>
+                <!--====== FORM START ======-->
+                <form method="POST" action="" enctype="multipart/form-data">
+
+                    <!-- PHP CODE BELOW -->
+                    <input class="form-control" type="file" id="uploadImage" value="<?php // ID GOES HERE ?>" onchange="previewImage()">
+                    <div class="d-grid gap-2 col-3 mx-auto">
+                        <button type="submit" name="upload" class="btn btn-primary mt-3" onclick="clearImage()">Upload</button>
+                    </div>
+
+
+                </form>
+                <!--====== FORM END ======-->
             </div>
         </div>
 
@@ -30,7 +38,7 @@
                 frame.src = URL.createObjectURL(event.target.files[0]);
             }
             function clearImage() {
-                document.getElementById('formFile').value = null;
+                document.getElementById('uploadImage').value = null;
                 frame.src = "";
             }
         </script>
