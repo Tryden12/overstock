@@ -62,14 +62,14 @@ $result = $link -> query("SELECT * FROM item");
                     <table class="table table-hover shopping-cart-wrap">
                         <thead class="text-muted">
                             <tr>
-                                <th scope="col">Item ID</th>
-                                <th scope="col" class="text-right" width="400">Choose Deal Date</th>
+                                <th scope="col" width="400">Item ID</th>
+                                <th scope="col" class="text-center" width="400">Choose Deal Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td> 
-                                    <select class="form-control mt-2">
+                                <td class="p-3"> 
+                                    <select class="form-control mt-2 pl-3">
                                             <option>1</option>
                                             <option>2</option>	
                                             <option>3</option>	
@@ -77,7 +77,7 @@ $result = $link -> query("SELECT * FROM item");
                                     </select> 
                                 </td>
 
-                                <td class="text-right"> 
+                                <td class="mx-auto p-3"> 
                                     <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30" class="text-end">
                                 </td>
                             </tr>
