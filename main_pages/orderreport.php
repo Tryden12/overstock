@@ -29,7 +29,7 @@ $result = $link -> query($sql1);
     <div class="container">
         <div class="row">
             <form method="post" action="adminportal.php">
-                        <button type="submit" class="btn btn-light m-4"> &#9166; Return to Portal</button>
+                        <button type="submit" class="btn btn-light m-4"> &#9166; Return to Admin Portal</button>
             </form>
         </div> 
     </div>
