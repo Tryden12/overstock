@@ -135,48 +135,26 @@
                     <hr>
                     <!-- Row for Quantity and add to cart button -->
                         <div class="row">
-                            <div class="col-sm-6">
-                                <dl class="dlist-inline">
-                                <dt>Quantity: </dt>
-                                    <dd> 
-                                        <select class="form-control form-control-sm" style="width:72px;">
-                                            <option> 1 </option>
-                                            <option> 2 </option>
-                                            <option> 3 </option>
-                                            <option> 4 </option>
-                                            <option> 5 </option>
-                                        </select>
-                                    </dd>
-                                </dl>  
-                            </div> 
-                            <div class="col-sm-6">
-                                <dl class="dlist-inline">
-                                    <dt>Size: </dt>
-                                    <dd>
-                                        <label class="form-check form-check-inline">
-                                        <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
-                                        <span class="form-check-label">SM</span>
-                                        </label>
-                                        <label class="form-check form-check-inline">
-                                        <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
-                                        <span class="form-check-label">MD</span>
-                                        </label>
-                                        <label class="form-check form-check-inline">
-                                        <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
-                                        <span class="form-check-label">LG</span>
-                                        </label>
-                                    </dd>
-                                </dl>  
-                            </div> 
+                        <dt class="col-sm-6">Quantity: </dt>
+                        <dd class="col-sm-6">
+                            <select class="form-control form-control-sm" style="width:80px;">
+                                    <option> 1 </option>
+                                    <option> 2 </option>
+                                    <option> 3 </option>
+                                    <option> 4 </option>
+                                    <option> 5 </option>
+                            </select>
+                        </dd>
                         </div> 
                         <!-- End of Row -->
 
                         <hr>
                         
                         <!-- ===================== ADD TO CART BUTTON =================================== -->
-                        <a href="#" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Add to Cart </a>
-
-
+                        <form method="post" action="main_pages/orderform.php">
+                            <input type="hidden" name="" value="<?php echo $Quantity ?>">
+                            <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-warning mb-3 fw-bold">Add to Cart</button>
+                        </form>
 
                     </article> <!-- END of card body -->
                 </aside> <!-- END of col -->
