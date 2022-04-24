@@ -7,7 +7,15 @@
 
 
 
-<div class="placeholder-div">Placeholder (DELETE THIS DIV)</div>
+<div class="container">
+  <div class="jumbotron mt-3 mb-3">
+    <h1 class="text-center pt-3">Upload Image</h1>      
+    <p class="text-center pb-3">Upload your image below to be saved in the database.</p>
+  </div>
+     
+</div>
+
+
 
 
 
