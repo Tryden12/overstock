@@ -30,7 +30,7 @@ $result = $link -> query($sql1);
 	<div class="card card-table mt-5">
     <div class="contianer">
             <div class="row">
-                <h1 class="text-black text-center m-2">Modify Inventory</h1>
+                <h1 class="text-black text-center m-2">Inventory Report</h1>
             </div>
         </div>
 	<div class="card-body">
