@@ -47,7 +47,39 @@ $result = $link -> query("SELECT * FROM item");
             <div>
                 <form method="post" action="">
                       
-                
+                    <div class="col-lg-8 mx-auto">
+
+                        <div class="card">
+                            <table class="table table-hover shopping-cart-wrap">
+                                <thead class="text-muted">
+                                    <tr>
+                                        <th scope="col" width="400">Item ID</th>
+                                        <th scope="col" class="text-center" width="400">Choose Deal Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="p-3"> 
+                                            <select class="form-control mt-2 pl-3">
+                                                    <option>1</option>
+                                                    <option>2</option>	
+                                                    <option>3</option>	
+                                                    <option>4</option>	
+                                            </select> 
+                                        </td>
+
+                                        <td class="mx-auto p-3"> 
+                                            <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30" class="text-end">
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <!--======== END OF TABLE ========-->
+                        </div>  
+
+                        <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit">Confirm Deal Date</button>
+                    </div> 
 
                 </form>
             </div>
@@ -56,39 +88,7 @@ $result = $link -> query("SELECT * FROM item");
 
     <!-------------------------- Row for Edit Cart ------------------------->
     <div class="row">
-            <div class="col-lg-8 mx-auto">
-
-                <div class="card">
-                    <table class="table table-hover shopping-cart-wrap">
-                        <thead class="text-muted">
-                            <tr>
-                                <th scope="col" width="400">Item ID</th>
-                                <th scope="col" class="text-center" width="400">Choose Deal Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-3"> 
-                                    <select class="form-control mt-2 pl-3">
-                                            <option>1</option>
-                                            <option>2</option>	
-                                            <option>3</option>	
-                                            <option>4</option>	
-                                    </select> 
-                                </td>
-
-                                <td class="mx-auto p-3"> 
-                                    <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30" class="text-end">
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                    <!--======== END OF TABLE ========-->
-                </div>  
-                
-                <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit">Confirm Deal Date</button>
-            </div> 
+            
     </div>
 
 </body>
