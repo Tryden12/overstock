@@ -2,7 +2,8 @@
 
 include '../db/connect.php';
 
-$result = $link -> query("SELECT * FROM item");
+$sql1 = "SELECT * FROM item";
+$result = $link -> query($sql1);
 
 ?>
 
@@ -14,7 +15,7 @@ $result = $link -> query("SELECT * FROM item");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modify Inventory</title>
+    <title>Inventory Report</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
     <!--Font Awesome-->
@@ -24,8 +25,7 @@ $result = $link -> query("SELECT * FROM item");
     <link href="../style.css" rel="stylesheet" type="text/css">
   </head>
 <body>
-
-<div class="container">
+    <div class="container">
         <div class="row">
             <form method="post" action="adminportal.php">
                         <button type="submit" class="btn btn-light m-4"> &#9166; Return to Admin Portal</button>
@@ -37,7 +37,7 @@ $result = $link -> query("SELECT * FROM item");
 	<div class="card card-table mt-5">
     <div class="contianer">
             <div class="row">
-                <h1 class="text-black text-center m-2">Modify Inventory</h1>
+                <h1 class="text-black text-center m-2">Inventory Report</h1>
             </div>
         </div>
 	<div class="card-body">
@@ -56,36 +56,33 @@ $result = $link -> query("SELECT * FROM item");
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>21</td>
-                                <td>21343</td>
-                                <td>Nike Free Run</td>
-                                <td>Yes</td>
-                                <td>30</td>
-                                <td>05/20/22</td>
-                                <td>998899</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>21</td>
-                                <td>21343</td>
-                                <td>Nike Free Run</td>
-                                <td>Yes</td>
-                                <td>30</td>
-                                <td>05/20/22</td>
-                                <td>998899</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>21</td>
-                                <td>21343</td>
-                                <td>Nike Free Run</td>
-                                <td>Yes</td>
-                                <td>30</td>
-                                <td>05/20/22</td>
-                                <td>998899</td>
-                            </tr>
+                            
+
+
+                            <!--================= ITERATE THROUGH DB and CREATE ROWS =================-->
+                            <?php 
+                            
+                                    if ($result -> num_rows > 0) {
+
+                                        while ($row = mysqli_fetch_array($result)) { // beginning of while loop ?>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td><?php echo $row['ItemID'] ?></td>
+                                                <td><?php echo $row['CategoryID'] ?></td>
+                                                <td><?php echo $row['ModelID'] ?></td>
+                                                <td><?php echo $row['ItemName'] ?></td>
+                                                <td><?php echo $row['InStock'] ?></td>
+                                                <td><?php echo $row['Price'] ?></td>
+                                                <td><?php echo $row['DealDate'] ?></td>
+                                                <td><?php echo $row['ImgID'] ?></td>
+                                            </tr>
+                            <?php       }  // end of while loop 
+                                    } // end if 
+                                
+                                ?>
+
+
+
                         </tbody>
                         </table>
 	</div>
