@@ -32,16 +32,117 @@ $result = $link -> query($sql1);
             </form>
         </div> 
     </div>
+
+    <!--========================================= Page Content Begins ===============================================-->
+    <div class="container">
+        <div class="row">
+            <form method="post" action="">
+                <div class="container">
+                    <h1 class="text-center">Add Item to Inventory</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group pt-3">
+                            <label for="first">ItemID</label>
+                            <input type="text" name="ItemID" class="form-control" placeholder="" id="first">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+
+                        <div class="col-md-6">
+                            <div class="form-group pt-3">
+                            <label for="last">CategoryID</label>
+                            <input type="text" name="CategoryID" class="form-control" placeholder="" id="last">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group pt-3">
+                                <label for="company">ModelID</label>
+                                <input type="text" name="ModelID" class="form-control" placeholder="" id="company">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+
+                        <div class="col-md-6">
+
+                            <div class="form-group pt-3">
+                                <label for="phone">ItemName</label>
+                                <input type="tel" name="ItemName" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+                    </div>
+                    <!--  row   -->
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group pt-3">
+                                <label for="company">InStock</label>
+                                <input type="text" name="InStock" class="form-control" placeholder="" id="company">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+
+                        <div class="col-md-6">
+
+                            <div class="form-group pt-3">
+                                <label for="phone">Price</label>
+                                <input type="tel" name="Price" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+                    </div>
+                    <!--  row   -->
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group pt-3">
+                                <label for="company">DealDate</label>
+                                <input type="text" name="DealDate" class="form-control" placeholder="" id="company">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+
+                        <div class="col-md-6">
+
+                            <div class="form-group pt-3">
+                                <label for="phone">ImgID</label>
+                                <input type="tel" name="IteImgIDmName" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <!--  col-md-6   -->
+                    </div>
+                    <!--  row   -->
+
+
+    
+
+
+    <button type="submit" class="btn btn-primary mt-3">Add Item to Inventory</button>
+
+</div>
+            
+            </form>
+        </div> 
+    </div>
+
+
+
+    
 	
-    <div class="global-container mt-5 p-2">
-	<div class="card card-table mt-5">
-    <div class="contianer">
-            <div class="row">
-                <h1 class="text-black text-center m-2">Modify Inventory</h1>
+    <div class="global-container mt-2 p-2 mb-5">
+	    <div class="card card-table mt-5">
+            <div class="contianer">
+                <div class="row">
+                    <h2 class="text-black text-center m-2">Current Inventory</h2>
+                </div>
             </div>
-        </div>
-	<div class="card-body">
-        <table class="table table-striped">
+	            <div class="card-body">
+                    <table class="table table-striped pb-3">
                         <thead>
                             <tr>
                             <th scope="col">ItemID</th>
@@ -52,7 +153,7 @@ $result = $link -> query($sql1);
                             <th scope="col">Price</th>
                             <th scope="col">DealDate</th>
                             <th scope="col">ImgID</th>
-                            <th scope="col">&nbsp;</th>
+                            <th scope="col">Delete?</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,6 +176,12 @@ $result = $link -> query($sql1);
                                                 <td><?php echo $row['Price'] ?></td>
                                                 <td><?php echo $row['DealDate'] ?></td>
                                                 <td><?php echo $row['ImgID'] ?></td>
+
+                                                <!-- Last Item is a Delete Button -->
+                                                <td>
+                                                    <button type="submit" class="btn btn-danger mt-3">DELETE</button>
+                                                </td>
+
                                             </tr>
                             <?php       }  // end of while loop 
                                     } // end if 
@@ -84,10 +191,11 @@ $result = $link -> query($sql1);
 
 
                         </tbody>
-                        </table>
-	</div>
-</div>
-</div>
+                    </table>
+	            </div>
+            </div>
+        </div>
+  
 
 </body>
 </html>
