@@ -15,7 +15,7 @@ $result = $link -> query($sql1);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inventory Report</title>
+    <title>Modify Inventory</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
     <!--Font Awesome-->
@@ -37,7 +37,7 @@ $result = $link -> query($sql1);
 	<div class="card card-table mt-5">
     <div class="contianer">
             <div class="row">
-                <h1 class="text-black text-center m-2">Inventory Report</h1>
+                <h1 class="text-black text-center m-2">Modify Inventory</h1>
             </div>
         </div>
 	<div class="card-body">
