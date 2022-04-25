@@ -103,7 +103,7 @@ $stmt->execute();
         </div> 
     </div>
 
-    <!-------------------------- Row for Edit Cart ------------------------->
+    <!-------------------------- Row for Deal Date Change ------------------------->
     <div class="row">
             
     </div>
