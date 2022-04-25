@@ -84,7 +84,7 @@ $stmt->execute();
                                         </td>
 
                                         <td class=""> 
-                                            <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30">
+                                            <input type="date" name="dateForm" value="<?php echo date('Y-m-d'); ?>" min="2022-05-01" max="2022-05-30">
                                         </td>
                                     </tr>
                                     
