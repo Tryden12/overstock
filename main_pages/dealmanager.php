@@ -2,7 +2,10 @@
 
 include '../db/connect.php';
 
-$result = $link -> query("SELECT * FROM item");
+
+$stmt = $link ->prepare("SELECT ItemID FROM item");
+$stmt->execute();
+
 
 ?>
 
@@ -60,16 +63,28 @@ $result = $link -> query("SELECT * FROM item");
                                 <tbody>
                                     <tr>
                                         <td class="p-3"> 
-                                            <select class="form-control mt-2 pl-3">
-                                                    <option>1</option>
-                                                    <option>2</option>	
-                                                    <option>3</option>	
-                                                    <option>4</option>	
+
+
+
+
+                                            <!--========== SELECT STATEMENT WITH PHP ==========-->
+
+                                            <select class="form-control mt-2 pl-3" name="ItemID">
+                                                <?php foreach ($stmt -> get_result() as $row) { ?>
+                                                        <option value="<?php echo $row[$i]?>"><?php echo $row[$i]?></option>
+                                                        <?php $i++; 
+                                                }?>
                                             </select> 
+
+                                            <!--========== END SELECT STATEMENT ==========-->
+
+
+
+
                                         </td>
 
-                                        <td class="mx-auto p-3"> 
-                                            <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30" class="text-end">
+                                        <td class=""> 
+                                            <input type="date" value="2022-05-01" min="2022-05-01" max="2022-05-30">
                                         </td>
                                     </tr>
                                     
@@ -78,7 +93,9 @@ $result = $link -> query("SELECT * FROM item");
                             <!--======== END OF TABLE ========-->
                         </div>  
 
-                        <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit">Confirm Deal Date</button>
+
+                        <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit"
+                                name="itemID" value="<?php echo $ItemID[$i] ?>">Confirm Deal Date</button>
                     </div> 
 
                 </form>
