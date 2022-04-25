@@ -84,7 +84,14 @@ $stmt->execute();
                                         </td>
 
                                         <td class=""> 
+
+
+
+                                             <!--========== DATE PICKER WITH PHP ==========-->
+
                                             <input type="date" name="dateForm" value="<?php echo date('Y-m-d'); ?>" min="2022-05-01" max="2022-05-30">
+                                            
+                                            <!--========== END DATE PICKER  ==========-->
                                         </td>
                                     </tr>
                                     
