@@ -6,7 +6,7 @@ include 'db/connect.php';
 
 if(isset($_POST['submit'])) 
 { 
-    $user = $_POST['Email'];
+    $user = $_POST['Username'];
     $pw = $_POST['Pass'];
     
     $sql = "SELECT * FROM users WHERE UName = \"$user\" && Pass = \"$pw\"";
@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
   if($failflag){
     echo "Authentication Info Incorrect. Try Again.";
   }else{
-    header('Location: ../main_pages/adminportal.php');
+    header('Location: main_pages/adminportal.php');
   }
 }
 
@@ -68,8 +68,8 @@ if(isset($_POST['submit']))
             <!-- ===== FORM START =====-->
 			<form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 				<div class="form-group">
-					<label class="login-label" for="inputEmail1">Email address</label>
-					<input type="email" name="Email" class="form-control form-control-sm" id="inputEmail1" aria-describedby="emailHelp">
+        <label class="login-label" for="inputUsername1">Username</label>
+					<input type="text" name="Username" class="form-control form-control-sm" id="inputUsername1" aria-describedby="usernameHelp">
 				</div>
 				<div class="form-group">
 					<label class="login-label" for="inputPassword">Password</label>
