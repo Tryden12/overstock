@@ -2,7 +2,7 @@
 
 <?php
 
-include '../db/connect.php';
+include 'db/connect.php';
 
 if(isset($_POST['submit'])) 
 { 
@@ -37,14 +37,14 @@ if(isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Overstock</title>
+    <title>Admin Login</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="../image/x-icon" href="../images/favicon.ico"/>
+    <link rel="shortcut icon" type="/image/x-icon" href="../images/favicon.ico"/>
     <!--Font Awesome-->
     <link rel="stylesheet" href="bootstrap_dist/font-awesome/css/font-awesome.min.css" />
     <!-- Bootstrap -->
-    <link href="../bootstrap_dist/css/bootstrap.css" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap_dist/css/bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 <!-- End of Header & Nav Section -->
@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
 	<div class="card-body">
         <div class="row">
             <div class="login-logo">
-                <img class="w-25 mx-auto d-block" src="../images/overstock_logo_tp.png">
+                <img class="w-25 mx-auto d-block" src="images/overstock_logo_tp.png">
             </div>
         </div>
 		<h3 class="card-title text-center mt-2">Admin Login</h3>
