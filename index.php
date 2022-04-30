@@ -105,7 +105,7 @@ foreach($dates as $val){
             
             <div class="carousel-inner">
               <div class="carousel-item active pb-3">
-                <img class="d-block w-50 m-auto b-shadow" src="images/<?php echo $IMgName[0];?>" alt="Featured Product">
+                <img class="d-block w-50 m-auto b-shadow" src="images/<?php echo $ImgName[0];?>" alt="Featured Product">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
               </div>
