@@ -85,9 +85,6 @@ foreach($dates as $val){
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="main_pages/orderform.php">Cart</a>
-            </li>
           </ul>
 
         </div>
@@ -109,16 +106,26 @@ foreach($dates as $val){
             <div class="carousel-inner">
               <div class="carousel-item active pb-3">
                 <img class="d-block w-50 m-auto b-shadow" src="images/shirts.jpg" alt="Featured Product">
-                <!-- Heading 
                 <div class="carousel-caption d-none d-md-block">
-                   h5 for heading (if needed) 
                 </div>
-				        -->
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <h5 class="card-title"><?php echo $ItemName; ?></h5>
+          <p class="card-text">$<?php echo $Price; ?></p>
+          <form method="post" action="main_pages/item.php">
+            <button type="submit" name="itemID" value="<?php echo $ItemID; ?>" class="btn btn-primary  m-4">View Item</button>
+          </form>
+        </div>
+
+      </div>
+
       <hr>
     </div>
 
