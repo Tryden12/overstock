@@ -2,11 +2,37 @@
 
 include '../db/connect.php';
 
+$ItemID = array();
+$i = 0;
 
-$stmt = $link ->prepare("SELECT ItemID FROM item");
-$stmt->execute();
+$sql = "SELECT ItemID FROM Item";
 
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_array($result)){
+          
+          $ItemID[$i] = $row['ItemID'];
+          $i++;
+        }
+        mysqli_free_result($result);
+    } else{
+        $ItemID[$i] = "err";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
 
+if(isset($_POST["submit"])) {
+    $ItemIDsql = $_POST["ItemID"];
+    $NewDate = $_POST["dateForm"];
+
+    $sql2 = "UPDATE item SET DealDate='$NewDate' WHERE ItemID = \"$ItemIDsql\"";
+    if($result = mysqli_query($link, $sql2)){
+        echo "Date entry successful";
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+}
 ?>
 
 
@@ -48,7 +74,7 @@ $stmt->execute();
     <div class="container">
         <div class="row">
             <div>
-                <form method="post" action="">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                       
                     <div class="col-lg-8 mx-auto">
 
@@ -70,9 +96,8 @@ $stmt->execute();
                                             <!--========== SELECT STATEMENT WITH PHP ==========-->
 
                                             <select class="form-control mt-2 pl-3" name="ItemID">
-                                                <?php foreach ($stmt -> get_result() as $row) { ?>
-                                                        <option value="<?php echo $row[$i]?>"><?php echo $row[$i]?></option>
-                                                        <?php $i++; 
+                                                <?php foreach ($ItemID as $ID) {
+                                                        echo "<option value=" . $ID . ">" . $ID . "</option>";
                                                 }?>
                                             </select> 
 
@@ -89,7 +114,7 @@ $stmt->execute();
 
                                              <!--========== DATE PICKER WITH PHP ==========-->
 
-                                            <input type="date" name="dateForm" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2022-05-30">
+                                            <input type="date" name="dateForm" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2024-05-30">
                                             
                                             <!--========== END DATE PICKER  ==========-->
                                         </td>
@@ -102,7 +127,7 @@ $stmt->execute();
 
 
                         <button class="btn btn-primary btn-lg mx-auto d-block mt-5" type="submit"
-                                name="itemID" value="<?php echo $ItemID[$i] ?>">Confirm Deal Date</button>
+                                name="submit">Confirm Deal Date</button>
                     </div> 
 
                 </form>
