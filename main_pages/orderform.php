@@ -1,3 +1,64 @@
+<?php
+
+    include '../db/connect.php';
+
+    $ItemID = $_POST["itemID"];
+
+    $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql1)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+              $ItemName = $row['ItemName'];
+              $Price = $row['Price'];
+              
+            }
+            mysqli_free_result($result);
+        } else{
+            $ItemName = "error";
+            $Price = "error";
+
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+    $sql2 = "SELECT category.* FROM Item INNER JOIN category ON item.CategoryID = category.CategoryID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql2)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+              $Category = $row['Category'];
+            }
+            mysqli_free_result($result);
+        } else{
+            $Category = "error";
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+    $sql3 = "SELECT images.* FROM item INNER JOIN images ON item.imgID = images.ImgID WHERE item.itemID = \"$ItemID\";";
+
+    if($result = mysqli_query($link, $sql3)){
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_array($result)){
+              
+            $ImgName = $row['ImgName'];
+            }
+            mysqli_free_result($result);
+        } else{
+        }
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    }
+
+?>
+
+
+
 <!-- Header -->
 <?php include '../view/header.php'; ?>
 <!-- End of Header & Nav Section -->
@@ -33,7 +94,7 @@
                                         <div class="img-wrap">
                                             
                                             <!--========  PHP CODE HERE  ========-->
-                                            <img class="w-50" src="../images/mensboot.png" class="img-thumbnail img-sm">
+                                            <img class="w-50" src="../images/<?php echo $ImgName ?>" class="img-thumbnail img-sm">
                                         </div>
 
 
@@ -41,7 +102,7 @@
 
 
                                                 <!--========  PHP CODE HERE  ========-->
-                                                <h6 class="title text-truncate pt-2">Product name goes here</h6>
+                                                <h6 class="title text-truncate pt-2"><?php echo $ItemName ?></h6>
 
 
                                             </figcaption>
@@ -57,7 +118,7 @@
                                 </td>
                                 <td> 
                                     <div class="price-wrap"> 
-                                        <var class="price">USD $145</var> 
+                                        <var class="price"><?php echo $Price ?></var> 
                                     </div> <!-- END of price wrap -->
                                 </td>
                                 <td class="text-right"> 
@@ -86,7 +147,7 @@
 
 
                                 <!--========  PHP CODE HERE  ========-->
-                                <span class="text-muted">$75.00</span>
+                                <span class="text-muted"><?php echo $Price ?></span>
 
 
 
@@ -101,12 +162,23 @@
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
                                     <h6 class="my-0">Tax</h6>
+
                                     <small class="text-muted">7%</small>
                                 </div>
 
 
                                 <!--========  PHP CODE HERE  ========-->
-                                <span class="text-muted">$9.12</span>
+                                <span class="text-muted">$
+
+
+                                    <!--========== Calculate Tax ==========-->
+                                    <?php
+                                        $tax = .07 * $Price;
+
+                                        echo $tax;
+                                    ?>
+
+                                </span>
 
 
 
@@ -116,7 +188,15 @@
 
 
                                 <!--========  PHP CODE HERE  ========-->
-                                <strong>$84.12</strong>
+                                <strong>$
+
+                                    <!--========== Calculate Total ==========-->
+                                    <?php
+                                            $total = $Price + $tax;
+
+                                            echo $total;
+                                    ?>
+                                </strong>
 
 
 
