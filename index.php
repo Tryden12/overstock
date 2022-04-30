@@ -105,7 +105,7 @@ foreach($dates as $val){
             
             <div class="carousel-inner">
               <div class="carousel-item active pb-3">
-                <img class="d-block w-50 m-auto b-shadow" src="images/shirts.jpg" alt="Featured Product">
+                <img class="d-block w-50 m-auto b-shadow" src="images/<?php echo $IMgName[0];?>4" alt="Featured Product">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
               </div>
@@ -117,10 +117,10 @@ foreach($dates as $val){
 
       <div class="row">
         <div class="col-12 text-center">
-          <h5 class="card-title"><?php echo $ItemName; ?></h5>
-          <p class="card-text">$<?php echo $Price; ?></p>
+          <h5 class="card-title"><?php echo $ItemName[0]; ?></h5>
+          <p class="card-text">$<?php echo $Price[0]; ?></p>
           <form method="post" action="main_pages/item.php">
-            <button type="submit" name="itemID" value="<?php echo $ItemID; ?>" class="btn btn-primary  m-4">View Item</button>
+            <button type="submit" name="itemID" value="<?php echo $ItemID[0]; ?>" class="btn btn-primary  m-4">View Item</button>
           </form>
         </div>
 
