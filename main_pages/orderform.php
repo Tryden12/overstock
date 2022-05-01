@@ -4,8 +4,7 @@
 
     $ItemID = $_POST["itemID"];
     $Quantity = $_POST["quantity"];
-    $Price = $_POST["price"];
-    $ItemName = $_POST["ItemName"];
+
 
     $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
 
@@ -97,7 +96,7 @@
                                         <div class="img-wrap">
                                             
                                             <!--========  PHP CODE HERE  ========-->
-                                            <img class="w-50" src="../images/<?php echo $ImgName ?>" class="img-thumbnail img-sm">
+                                            <img class="w-50 img-thumbnail img-sm" src="../images/<?php echo $ImgName ?>">
                                         </div>
 
 
@@ -122,7 +121,13 @@
                                 </td>
                                 <td> 
                                     <div class="price-wrap"> 
-                                        <var class="price"><?php echo $Price ?></var> 
+                                        <var class="price">
+                                            <?php 
+                                                
+                                                echo number_format((float)$Price, 2, '.', '');
+                 
+                                            ?>
+                                        </var> 
                                     </div> <!-- END of price wrap -->
                                 </td>
                                 <td class="text-right"> 
@@ -151,7 +156,17 @@
 
 
                                 <!--========  PHP CODE HERE  ========-->
-                                <span class="text-muted"><?php echo $Price ?></span>
+                                <span class="text-muted">
+                                    <?php 
+                                        if ($Quantity == 1) {
+                                            echo number_format((float)$Price, 2, '.', ''); 
+                                        } else {
+                                            $Price = $Price * $Quantity;
+                                            echo number_format((float)$Price, 2, '.', ''); 
+                                        }
+                                                                        
+                                    ?>
+                                </span>
 
 
 
@@ -178,8 +193,7 @@
                                     <!--========== Calculate Tax ==========-->
                                     <?php
                                         $tax = .07 * $Price;
-
-                                        echo $tax;
+                                        echo number_format((float)$tax, 2, '.', ''); 
                                     ?>
 
                                 </span>
@@ -197,8 +211,7 @@
                                     <!--========== Calculate Total ==========-->
                                     <?php
                                             $total = $Price + $tax;
-
-                                            echo $total;
+                                            echo number_format((float)$total, 2, '.', ''); 
                                     ?>
                                 </strong>
 

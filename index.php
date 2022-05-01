@@ -183,7 +183,7 @@ foreach($dates as $val){
                       <h5 class="card-title"><?php echo $ItemName[$i]?></h5>
                       <p class="card-text">$<?php echo $Price[$i]?></p>
                       <form method="post" action="main_pages/item.php">
-                        <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-primary  m-4">View Item</button>
+                        <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-primary  mb-4">View Item</button>
                       </form>
                     </div>
                   </div>

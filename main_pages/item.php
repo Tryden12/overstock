@@ -152,9 +152,9 @@
                         <hr>
                         
                         <!-- ===================== ADD TO CART BUTTON =================================== -->
-                        
+                            <input type="hidden" name="itemID" value="<?php echo $ItemID ?>">
                             <input type="hidden" name="" value="<?php echo $Quantity ?>">
-                            <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-warning mb-3 fw-bold">Add to Cart</button>
+                            <button type="submit" name="submit" class="btn btn-warning mb-3 fw-bold">Add to Cart</button>
                         </form>
 
                     </article> <!-- END of card body -->
