@@ -64,13 +64,12 @@ $result = $link -> query($sql1);
 
                                         while ($row = mysqli_fetch_array($result)) { // beginning of while loop ?>
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td><?php echo $rows['OrderID'] ?></td>
-                                                <td><?php echo $rows['CustID'] ?></td>
-                                                <td><?php echo $rows['ItemID'] ?></td>
-                                                <td><?php echo $rows['Quantity'] ?></td>
-                                                <td><?php echo $rows['Total'] ?></td>
-                                                <td><?php echo $rows['STAT'] ?></td>
+                                                <td><?php echo $row['OrderID'] ?></td>
+                                                <td><?php echo $row['CustID'] ?></td>
+                                                <td><?php echo $row['ItemID'] ?></td>
+                                                <td><?php echo $row['Quantity'] ?></td>
+                                                <td><?php echo $row['Total'] ?></td>
+                                                <td><?php echo $row['STAT'] ?></td>
                                             </tr>
                             <?php       }  // end of while loop 
                                     } // end if 

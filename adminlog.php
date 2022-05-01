@@ -4,31 +4,7 @@
 
 include 'db/connect.php';
 
-if(isset($_POST['submit'])) 
-{ 
-    $user = $_POST['Username'];
-    $pw = $_POST['Pass'];
-    
-    $sql = "SELECT * FROM users WHERE UName = \"$user\" && Pass = \"$pw\"";
 
-    if($result = mysqli_query($link, $sql)){
-      if(mysqli_num_rows($result) > 0){
-          while($row = mysqli_fetch_array($result)){
-          }
-          mysqli_free_result($result);
-      } else{
-        $failflag = TRUE;
-      }
-  } else{
-      echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-  }
-
-  if($failflag){
-    echo "Authentication Info Incorrect. Try Again.";
-  }else{
-    header('Location: main_pages/adminportal.php');
-  }
-}
 
 ?>
 
@@ -53,10 +29,43 @@ if(isset($_POST['submit']))
 <!-- Content goes below -->
 
 
+<div></div>
 
 <div class="global-container mt-5">
 	<div class="card login-form mt-5">
 	<div class="card-body">
+    <div class="row text-center text-danger">
+        <div class="text-center font-weight-bold">
+          <?php
+            if(isset($_POST['submit'])) 
+            { 
+                $user = $_POST['Username'];
+                $pw = $_POST['Pass'];
+                
+                $sql = "SELECT * FROM users WHERE UName = \"$user\" && Pass = \"$pw\"";
+            
+                if($result = mysqli_query($link, $sql)){
+                  if(mysqli_num_rows($result) > 0){
+                      while($row = mysqli_fetch_array($result)){
+                      }
+                      mysqli_free_result($result);
+                  } else{
+                    $failflag = TRUE;
+                  }
+              } else{
+                  echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+              }
+            
+              if($failflag){
+                echo "<h5>Incorrect username or password. Try again!</h5>";
+              }else{
+                header('Location: main_pages/adminportal.php');
+              }
+            }
+          ?>
+        </div>
+
+        </div>
         <div class="row">
             <div class="login-logo">
                 <img class="w-25 mx-auto d-block" src="images/overstock_logo_tp.png">
@@ -82,6 +91,7 @@ if(isset($_POST['submit']))
 		</div>
 	</div>
 </div>
+
 </div>
 
 

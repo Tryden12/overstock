@@ -66,7 +66,6 @@ $result = $link -> query($sql1);
 
                                         while ($row = mysqli_fetch_array($result)) { // beginning of while loop ?>
                                             <tr>
-                                                <th scope="row">1</th>
                                                 <td><?php echo $row['ItemID'] ?></td>
                                                 <td><?php echo $row['CategoryID'] ?></td>
                                                 <td><?php echo $row['ModelID'] ?></td>
