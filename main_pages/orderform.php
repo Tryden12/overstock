@@ -1,62 +1,118 @@
 <?php
 
     include '../db/connect.php';
+    if(isset($_POST["email"])) {
 
-    $ItemID = $_POST["itemID"];
-    $Quantity = $_POST["quantity"];
+        $fN = $_POST['firstName'];
+        $lN = $_POST['lastName'];
+        $mail = $_POST['email'];
+        $addr = $_POST['address'];
+        $addr2 = $_POST['address2'];   
+        $city = $_POST['city'];
+        $st = $_POST['state'];
+        $zip = $_POST['zip'];
+        $ItemID = $_POST["itemID"];
+        $Quantity = $_POST["quantity"];
+        $total = $_POST["total"];
+        $ItemName = $_POST["itemname"];
+        $PriceSQL = $_POST["price"];
+        $ImgName = $_POST['imgname'];
+
+        echo $ItemID;
 
 
-    $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
+        $addrf = $addr . " " . $addr2;
+    
+        $sqlIN = "INSERT INTO customer(`FName`, `LName`, `ShipAdd`, `ShipCity`, `ShipState`, `ShipZIP`, `BillAdd`, `BillCity`, `BillState`, `BillZIP`, `Phone`, `Email`) VALUES (\"$fN\", \"$lN\", \"$addrf\", \"$city\", \"$st\", \"$zip\", \"$addrf\", \"$city\",\"$st\",\"$zip\", '555-555-5555',\"$mail\")";
+    
+        if($result = mysqli_query($link, $sqlIN)){
 
-    if($result = mysqli_query($link, $sql1)){
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_array($result)){
+            $sqlCustID = "SELECT CustID FROM customer WHERE Email = \"$mail\" && ShipZIP = \"$zip\" && LName = \"$lN\"";
+
+            if($result = mysqli_query($link, $sqlCustID)){
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_array($result)){
+                  
+                    $CustID = $row['CustID'];
+                    }
+
+                    $sqlIN2 = "INSERT INTO orderroot(`CustID`, `ItemID`, `Quantity`, `Total`, `STAT`) VALUES (\"$CustID\",\"$ItemID\",\"$Quantity\",\"$total\",'New')";
+
+                    if($result = mysqli_query($link, $sqlIN2)){
+
+                        header("Location: orderconf.php");
+                        
+                    } else{
+                        echo "ERROR: Could not able to execute $sqlIN2. " . mysqli_error($link);
+                    }
+
+                    mysqli_free_result($result);
+                }
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+        
+        
+    }else{
+
+        $ItemID = $_POST["itemID"];
+        $Quantity = $_POST["quantity"];
+
+
+        $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
+
+        if($result = mysqli_query($link, $sql1)){
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_array($result)){
               
-              $ItemName = $row['ItemName'];
-              $Price = $row['Price'];
+                $ItemName = $row['ItemName'];
+                $PriceSQL = $row['Price'];
               
+                }
+                mysqli_free_result($result);
+            } else{
+                $ItemName = "error";
+                $Price = "error";
+
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+
+        $sql2 = "SELECT category.* FROM Item INNER JOIN category ON item.CategoryID = category.CategoryID WHERE item.itemID = \"$ItemID\";";
+
+        if($result = mysqli_query($link, $sql2)){
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_array($result)){
+              
+                $Category = $row['Category'];
             }
             mysqli_free_result($result);
-        } else{
-            $ItemName = "error";
-            $Price = "error";
-
-        }
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    }
-
-    $sql2 = "SELECT category.* FROM Item INNER JOIN category ON item.CategoryID = category.CategoryID WHERE item.itemID = \"$ItemID\";";
-
-    if($result = mysqli_query($link, $sql2)){
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_array($result)){
-              
-              $Category = $row['Category'];
+            } else{
+                $Category = "error";
             }
-            mysqli_free_result($result);
         } else{
-            $Category = "error";
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    }
 
-    $sql3 = "SELECT images.* FROM item INNER JOIN images ON item.imgID = images.ImgID WHERE item.itemID = \"$ItemID\";";
+        $sql3 = "SELECT images.* FROM item INNER JOIN images ON item.imgID = images.ImgID WHERE item.itemID = \"$ItemID\";";
 
-    if($result = mysqli_query($link, $sql3)){
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_array($result)){
+        if($result = mysqli_query($link, $sql3)){
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_array($result)){
               
-            $ImgName = $row['ImgName'];
+                $ImgName = $row['ImgName'];
+                }
+                mysqli_free_result($result);
+            } else{
             }
-            mysqli_free_result($result);
         } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    }
-
+    }    
 ?>
 
 
@@ -124,7 +180,7 @@
                                         <var class="price">
                                             <?php 
                                                 
-                                                echo number_format((float)$Price, 2, '.', '');
+                                                echo number_format((float)$PriceSQL, 2, '.', '');
                  
                                             ?>
                                         </var> 
@@ -159,9 +215,10 @@
                                 <span class="text-muted">
                                     <?php 
                                         if ($Quantity == 1) {
+                                            $Price = $PriceSQL;
                                             echo number_format((float)$Price, 2, '.', ''); 
                                         } else {
-                                            $Price = $Price * $Quantity;
+                                            $Price = $PriceSQL * $Quantity;
                                             echo number_format((float)$Price, 2, '.', ''); 
                                         }
                                                                         
@@ -251,19 +308,19 @@
 
 
                         <!-- ========== FORM BEGINS  ==========-->
-                        <form class="needs-validation" method="POST" action="orderconf.php" novalidate>
+                        <form class="needs-validation" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" novalidate>
                             <div class="row">
 
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">First name</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required>
                                     <div class="invalid-feedback">
                                         Valid first name is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName">Last name</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" required>
                                     <div class="invalid-feedback">
                                         Valid last name is required.
                                     </div>
@@ -273,7 +330,7 @@
                             <div class="mb-3">
                                 <label for="email">Email
                                 </label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
                                 <div class="invalid-feedback">
                                     Please enter a valid email address.
                                 </div>
@@ -281,7 +338,7 @@
 
                             <div class="mb-3">
                                 <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                                <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St" required>
                                 <div class="invalid-feedback">
                                     Please enter your shipping address.
                                 </div>
@@ -291,30 +348,30 @@
                                 <label for="address2">Address 2
                                     <span class="text-muted">(Optional)</span>
                                 </label>
-                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                                <input type="text" class="form-control" name="address2" id="address2" placeholder="Apartment or suite">
                             </div>
 
                             <div class="row">
                                 <div class="col-md-5 mb-3">
-                                    <label for="country">Country</label>
-                                    <input type="text" class="form-control" id="country" placeholder="" required>
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" name="city" id="city" placeholder="" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
                                     <div class="invalid-feedback">
-                                        Please select a valid country.
+                                        Please select a valid city.
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="state">State</label>
-                                   <input type="text" class="form-control" id="state" placeholder="" required>
+                                   <input type="text" class="form-control" name="state" id="state" placeholder="" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="zip">Zip</label>
-                                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                                    <input type="text" class="form-control" name="zip" id="zip" placeholder="" required>
                                     <div class="invalid-feedback">
                                         Zip code required.
                                     </div>
@@ -325,8 +382,13 @@
 
                             
                             </div>
-                            
-                            <button class="btn btn-primary btn-lg btn-block mb-5" type="submit">Place Order</button>
+                            <input type="hidden" name="itemID" id="itemID" value="<?php echo $ItemID?>">
+                            <input type="hidden" name="quantity" id="quantity" value="<?php echo $Quantity?>">
+                            <input type="hidden" name="total" id="total" value="<?php echo $total?>">
+                            <input type="hidden" name="itemname" id="itemname" value="<?php echo $ItemName?>">
+                            <input type="hidden" name="price" id="price" value="<?php echo $PriceSQL?>">
+                            <input type="hidden" name="imgname" id="imgname" value="<?php echo $ImgName?>">
+                            <button class="btn btn-primary btn-lg btn-block mb-5" type="submit" name="submit">Place Order</button>
                         </form>
                     </div>
                 </div>
