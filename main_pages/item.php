@@ -98,6 +98,7 @@
 <!-- ===================== Product Info (right side) =================================== -->
             <aside class="col-sm-6">
                 <article class="card-body">
+                    <form method="post" action="orderform.php">
 
 
                     <!--== PHP CODE HERE FOR PRODUCT NAME ==-->
@@ -137,7 +138,7 @@
                         <div class="row">
                         <dt class="col-sm-6">Quantity: </dt>
                         <dd class="col-sm-6">
-                            <select class="form-control form-control-sm" style="width:80px;">
+                            <select name="quantity" class="form-control form-control-sm" style="width:80px;">
                                     <option> 1 </option>
                                     <option> 2 </option>
                                     <option> 3 </option>
@@ -151,7 +152,7 @@
                         <hr>
                         
                         <!-- ===================== ADD TO CART BUTTON =================================== -->
-                        <form method="post" action="orderform.php">
+                        
                             <input type="hidden" name="" value="<?php echo $Quantity ?>">
                             <button type="submit" name="itemID" value="<?php echo $ItemID[$i] ?>" class="btn btn-warning mb-3 fw-bold">Add to Cart</button>
                         </form>
