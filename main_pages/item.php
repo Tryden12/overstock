@@ -102,7 +102,7 @@
 
 
                     <!--== PHP CODE HERE FOR PRODUCT NAME ==-->
-                    <h3 class="title mb-3"><?php echo $ItemName ?></h3>
+                    <h3 name="itemName" class="title mb-3"><?php echo $ItemName ?></h3>
 
 
 
@@ -113,7 +113,7 @@
 
 
                             <!--== PHP CODE HERE FOR PRODUCT PRICE ==-->
-                            <span class="currency">US $</span><span class="num"><?php echo $Price ?></span>
+                            <span name="price" class="currency">US $</span><span class="num"><?php echo $Price ?></span>
 
 
 

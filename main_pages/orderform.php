@@ -3,6 +3,9 @@
     include '../db/connect.php';
 
     $ItemID = $_POST["itemID"];
+    $Quantity = $_POST["quantity"];
+    $Price = $_POST["price"];
+    $ItemName = $_POST["ItemName"];
 
     $sql1 = "SELECT * FROM item INNER JOIN ( model INNER JOIN manufacturer ON model.ManufacturerID = manufacturer.ManufacturerID) ON item.ModelID = model.ModelID WHERE item.itemID = \"$ItemID\";";
 
@@ -110,6 +113,7 @@
                                 </td>
                                 <td> 
                                     <select class="form-control">
+                                            <option><?php echo $Quantity; ?></option>
                                             <option>1</option>
                                             <option>2</option>	
                                             <option>3</option>	
